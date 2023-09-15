@@ -1,3 +1,15 @@
+## 문자열 덧셈 계산기
+[기능목록]
+1. 문자열 입력
+2. 문자열 분리  
+   2-1. 쉼표 또는 콜론을 구분자  
+   2-2. 커스텀 구분자
+   * 숫자 이외의 값 또는 음수이면 -> RuntimeException 예외 Throw
+3. 합 계산
+
+
+---
+
 ## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)
 
 ---
