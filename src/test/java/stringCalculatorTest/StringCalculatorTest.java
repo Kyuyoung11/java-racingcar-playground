@@ -6,6 +6,7 @@ import stringAddCalculator.StringCalculator;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StringCalculatorTest {
@@ -41,6 +42,13 @@ public class StringCalculatorTest {
     public void splitAndSumString_Custom() {
         int sum = StringCalculator.splitAndSum("//;\n1;2;3");
         assertEquals(sum, 6);
+    }
+
+    @Test
+    public void splitAndSum_ThrowException() throws Exception {
+        assertThatThrownBy(() -> StringCalculator.splitAndSum("-1,2,3"))
+                .isInstanceOf(RuntimeException.class);
+
     }
 
 
