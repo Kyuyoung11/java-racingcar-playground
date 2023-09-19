@@ -25,10 +25,15 @@ public class CarMovingInfo {
         return movingNumber;
     }
 
-    public int getMoveNumber() throws Exception {
-        Random rd = new Random();
-        int randomNumber = rd.nextInt(9);
-        return validateMovingNumber(randomNumber);
+    public int getMoveNumber() {
+        try {
+            Random rd = new Random();
+            int randomNumber = rd.nextInt(9);
+            return validateMovingNumber(randomNumber);
+        } catch(Exception e) {
+            System.out.println("[오류]"+e.toString());
+        }
+        return this.notMovingNumber;
     }
 
 
