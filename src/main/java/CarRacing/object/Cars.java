@@ -21,10 +21,4 @@ public class Cars {
         this.cars.add(car);
     }
 
-    public void moveCars() {
-        CarMovingInfo carMovingInfo = new CarMovingInfo(4,9,0);
-        cars.stream()
-                .forEach(car -> car.moveCar(carMovingInfo.getMoveNumber()));
-    }
-
 }
