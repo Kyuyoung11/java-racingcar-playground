@@ -1,5 +1,8 @@
 package CarRacing.object;
 
+import lombok.Getter;
+
+@Getter
 public class Car {
     String name;
     int distance;
