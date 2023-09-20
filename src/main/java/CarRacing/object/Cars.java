@@ -23,8 +23,8 @@ public class Cars {
 
     public void moveCars() {
         CarMovingInfo carMovingInfo = new CarMovingInfo(4,9,0);
-        cars.stream()
-                .forEach(car -> car.moveCar(carMovingInfo.getMoveNumber()));
+        for (Car car: this.cars) {
+            car.moveCar(carMovingInfo.getMoveNumber());
+        }
     }
-
 }

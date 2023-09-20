@@ -1,11 +1,13 @@
 package CarRacingTest;
 
+import CarRacing.object.Car;
 import CarRacing.object.Cars;
 import CarRacing.service.CarRacingGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CarRacingGeneratorTest {
     CarRacingGenerator carRacingGenerator;
@@ -22,6 +24,7 @@ public class CarRacingGeneratorTest {
         assertEquals(testCars.getCars().get(1).getName(), "a");
         assertEquals(testCars.getCars().get(2).getName(), "zzz");
     }
+
 
 
 }

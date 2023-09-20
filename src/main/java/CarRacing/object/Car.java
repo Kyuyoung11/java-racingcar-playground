@@ -24,4 +24,12 @@ public class Car {
     public void moveCar(int movingNumber) {
         this.distance+=movingNumber;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder distanceBuilder = new StringBuilder();
+        for (int i=0; i<this.distance; i++)
+            distanceBuilder.append('-');
+        return name + " : " + distanceBuilder.toString();
+    }
 }

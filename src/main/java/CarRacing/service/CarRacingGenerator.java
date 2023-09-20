@@ -1,6 +1,7 @@
 package CarRacing.service;
 
 import CarRacing.object.Car;
+import CarRacing.object.CarMovingInfo;
 import CarRacing.object.Cars;
 import CarRacing.object.Splitter;
 
@@ -15,5 +16,7 @@ public class CarRacingGenerator {
                 .forEach(carName -> cars.addCar(new Car(carName)));
         return cars;
     }
+
+
 
 }
