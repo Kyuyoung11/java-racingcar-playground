@@ -21,4 +21,10 @@ public class Cars {
         this.cars.add(car);
     }
 
+    public void moveCars() {
+        CarMovingInfo carMovingInfo = new CarMovingInfo(4,9,0);
+        for (Car car: this.cars) {
+            car.moveCar(carMovingInfo.getMoveNumber());
+        }
+    }
 }

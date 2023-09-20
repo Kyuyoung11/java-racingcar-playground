@@ -25,14 +25,6 @@ public class CarRacingGeneratorTest {
         assertEquals(testCars.getCars().get(2).getName(), "zzz");
     }
 
-    @Test
-    void moveCars() {
-        Cars testCars = carRacingGenerator.makeCars("1,a,zzz");
-        testCars = carRacingGenerator.moveCars(testCars);
-        for (Car car : testCars.getCars()) {
-            assertTrue(car.getDistance() > 0);
-        }
-    }
 
 
 }

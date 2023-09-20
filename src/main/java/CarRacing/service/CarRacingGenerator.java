@@ -17,12 +17,6 @@ public class CarRacingGenerator {
         return cars;
     }
 
-    public Cars moveCars(Cars cars) {
-        CarMovingInfo carMovingInfo = new CarMovingInfo(4,9,0);
-        for (Car car: cars.getCars()) {
-            car.moveCar(carMovingInfo.getMoveNumber());
-        }
-        return cars;
-    }
+
 
 }
