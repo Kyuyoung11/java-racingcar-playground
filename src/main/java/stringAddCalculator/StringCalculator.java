@@ -38,15 +38,14 @@ public class StringCalculator {
 
 
     private static String[] _doSplit(String str) {
-        try {
-            Pattern pattern = Pattern.compile("(//)(.*?)(\n)");
-            Matcher matcher = pattern.matcher(str);
-            matcher.find();
+        Pattern pattern = Pattern.compile("(//)(.*?)(\n)");
+        Matcher matcher = pattern.matcher(str);
+        if(matcher.find()) {
             str = str.substring(matcher.end());
-            return str.split(matcher.group(2).trim());
-        } catch (Exception e) {
-            return str.split(",|:");
+            return str.split("[,;"+matcher.group(2).trim()+"]");
+
         }
+        return str.split("[,:]");
     }
 
     private static boolean _isEmptyStr(String str) {
