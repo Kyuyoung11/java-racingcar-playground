@@ -23,4 +23,10 @@ public class Cars implements Iterable<Car>{
         return cars.iterator();
     }
 
+    public void moveCars() {
+        CarMovingInfo carMovingInfo = new CarMovingInfo(4,9,0);
+        for (Car car: this.cars) {
+            car.moveCar(carMovingInfo.getMoveNumber());
+        }
+    }
 }
