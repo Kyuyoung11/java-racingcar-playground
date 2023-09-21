@@ -5,18 +5,26 @@ import CarRacing.object.CarMovingInfo;
 import CarRacing.object.Cars;
 import CarRacing.object.Splitter;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class CarRacingGenerator {
     public Cars makeCars(String carNameString) {
         Splitter splitter = new Splitter(",");
 
-        Cars cars = new Cars();
+        List<Car> carList = new ArrayList<>();
         Arrays.stream(splitter.doSplit(carNameString))
-                .forEach(carName -> cars.addCar(new Car(carName)));
-        return cars;
+                .forEach(carName -> carList.add(new Car(carName)));
+        return new Cars(carList);
     }
 
-
+    public Cars moveCars(Cars cars) {
+        CarMovingInfo carMovingInfo = new CarMovingInfo(4,9,0);
+        for (Car car: cars) {
+            car.moveCar(carMovingInfo.getMoveNumber());
+        }
+        return cars;
+    }
 
 }

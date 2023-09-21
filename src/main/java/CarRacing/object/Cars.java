@@ -3,11 +3,12 @@ package CarRacing.object;
 import lombok.Getter;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Getter
-public class Cars {
-    List<Car> cars;
+public class Cars implements Iterable<Car>{
+    private final List<Car> cars;
 
     public Cars() {
         cars = new ArrayList<>();
@@ -17,8 +18,9 @@ public class Cars {
         this.cars = cars;
     }
 
-    public void addCar(Car car) {
-        this.cars.add(car);
+    @Override
+    public Iterator<Car> iterator() {
+        return cars.iterator();
     }
 
     public void moveCars() {
