@@ -5,6 +5,7 @@ import lombok.Getter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter
 public class Cars implements Iterable<Car>{
@@ -23,10 +24,18 @@ public class Cars implements Iterable<Car>{
         return cars.iterator();
     }
 
-    public void moveCars() {
-        CarMovingInfo carMovingInfo = new CarMovingInfo(4,9,0);
-        for (Car car: this.cars) {
-            car.moveCar(carMovingInfo.getMoveNumber());
-        }
+
+    public Integer getMaxDistance() {
+        return this.cars.stream()
+                .mapToInt(Car::getDistance)
+                .max()
+                .getAsInt();
+    }
+
+    public List<String> getWinnerCars() {
+        return this.cars.stream()
+                .filter(car-> getMaxDistance() == car.getDistance())
+                .map(Car::getName)
+                .collect(Collectors.toList());
     }
 }
