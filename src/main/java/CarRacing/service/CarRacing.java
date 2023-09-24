@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CarRacingGenerator {
+public class CarRacing {
     public Cars makeCars(String carNameString) {
         Splitter splitter = new Splitter(",");
 
