@@ -13,14 +13,16 @@
 ---
 ## 자동차 경주 게임 
 [기능 목록]
-1. 각 자동차 이름 부여 - InputView#getCarsName
+1. 자동차 생성 Main#_createCars  
+   1-1. 자동차 이름 입력 - InputView#getCarNamesInput  
+   1-2. 자동차 만들기 - CarRacing#makeCars
    * 자동차 이름 5자 초과 불가능
    * 자동차 이름은 쉼표를 기준으로 구분  
 2. 시도할 횟수 입력 - InputView#getTryNumber
 3. [시도 횟수 만큼 loop] 자동차 전진 - CarRacingGenerator#moveCars  
-   3-1. 랜덤 값 구하기 - CarRacingGenerator#getMoveNumber  
-   3-2. 4 이상이면 전진 - CarRacingGenerator#moveCarForward  
-   * 랜덤 0~9 값 구하고, 4 이상이면 전진. 
+   3-1. 랜덤 값 구하기 - CarRacingGenerator#getMovingNumber    
+   3-2. 4 이상이면 전진 - Car#moveCar  
+   3-3. 전진 결과 출력 - ResultPrinter#printMoveResult
 4. 우승한 자동차 출력 - ResultPrinter#printWinner
    * 한 명 이상일 수 있다.
 
