@@ -14,7 +14,7 @@ public class Main {
 
     private static void _startGame() {
         //1. 자동차 get
-        Cars cars = _getCars();
+        Cars cars = _createCars();
 
         //2. 시도 횟수 입력
         int tryNumber = InputView.getTryNumberInput();
@@ -30,7 +30,7 @@ public class Main {
         ResultPrinter.printWinner(cars);
     }
 
-    private static Cars _getCars() {
+    private static Cars _createCars() {
         while(true) {
             //1-1. 자동차 이름 입력
             String carNames = InputView.getCarNamesInput();
