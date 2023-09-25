@@ -11,23 +11,23 @@ public class CarTest {
 
     @BeforeEach
     void setUp() {
-        car = new Car("test");
+        car = new Car("test",0);
     }
     @Test
     void moveCarTest() {
         car.moveCar(1);
         assertEquals(car.getDistance(),1);
 
-        car.moveCar(4);
-        assertEquals(car.getDistance(),5);
+        car.moveCar(0);
+        assertEquals(car.getDistance(),1);
     }
 
     @Test
     void toStringTest() {
-        car.moveCar(3);
-        assertEquals(car.toString(),"test : ---");
-        car.moveCar(5);
-        assertEquals(car.toString(), "test : --------");
+        car.moveCar(1);
+        assertEquals(car.toString(),"test : -");
+        car.moveCar(1);
+        assertEquals(car.toString(), "test : --");
 
     }
 

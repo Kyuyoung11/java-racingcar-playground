@@ -18,25 +18,25 @@ public class CarsTest {
     @BeforeEach
     void setUp(){
         List<Car> carList = new ArrayList<>();
-        carList.add(new Car("a"));
-        carList.add(new Car("B"));
-        carList.add(new Car("c"));
+        carList.add(new Car("a",0));
+        carList.add(new Car("B",0));
+        carList.add(new Car("c",0));
         cars = new Cars(carList);
     }
 
     @Test
     void getMaxDistanceTest() {
-        cars.getCars().get(0).moveCar(5);
-        cars.getCars().get(1).moveCar(3);
-        cars.getCars().get(2).moveCar(8);
-        assertEquals(8, (int) cars.getMaxDistance());
+        cars.getCars().get(0).moveCar(1);
+        cars.getCars().get(1).moveCar(0);
+        cars.getCars().get(2).moveCar(0);
+        assertEquals(1, (int) cars.getMaxDistance());
     }
 
     @Test
     void getWinnersTest() {
-        cars.getCars().get(0).moveCar(5);
-        cars.getCars().get(1).moveCar(8);
-        cars.getCars().get(2).moveCar(8);
+        cars.getCars().get(0).moveCar(0);
+        cars.getCars().get(1).moveCar(1);
+        cars.getCars().get(2).moveCar(1);
         assertEquals(cars.getWinnerCars(), Arrays.asList("B", "c"));
     }
 
