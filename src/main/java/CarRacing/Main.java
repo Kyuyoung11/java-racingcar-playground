@@ -3,7 +3,7 @@ package CarRacing;
 
 import CarRacing.object.Cars;
 import CarRacing.service.CarRacing;
-import CarRacing.service.ResultPrinter;
+import CarRacing.utils.ResultPrinter;
 import CarRacing.view.InputView;
 
 public class Main {

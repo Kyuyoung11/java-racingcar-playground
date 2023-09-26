@@ -1,4 +1,4 @@
-package CarRacing.service;
+package CarRacing.utils;
 
 import CarRacing.object.Car;
 import CarRacing.object.Cars;

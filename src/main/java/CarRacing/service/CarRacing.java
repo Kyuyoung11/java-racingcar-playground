@@ -26,7 +26,7 @@ public class CarRacing {
     }
 
     public void moveCars(Cars cars) {
-        CarMovingInfo carMovingInfo = new CarMovingInfo(4,9,1,0);
+        CarMovingInfo carMovingInfo = new CarMovingInfo(4,10,1,0);
         for (Car car : cars) {
             car.moveCar(carMovingInfo.getMovingNumber());
         }
