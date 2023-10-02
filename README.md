@@ -4,20 +4,20 @@
 2. 문자열 분리  
    2-1. 쉼표 또는 콜론을 구분자  
    2-2. 커스텀 구분자
-    * 숫자 이외의 값 또는 음수이면 -> RuntimeException 예외 Throw
-3. 합 계산
+   * 숫자 이외의 값 또는 음수이면 -> RuntimeException 예외 Throw
+3. 합 계산  
 
 <br/>
 <br/>
 
 ---
-## 자동차 경주 게임
+## 자동차 경주 게임 
 [기능 목록]
 1. 자동차 생성 Main#_createCars  
    1-1. 자동차 이름 입력 - InputView#getCarNamesInput  
    1-2. 자동차 만들기 - CarRacing#makeCars
-    * 자동차 이름 5자 초과 불가능
-    * 자동차 이름은 쉼표를 기준으로 구분
+   * 자동차 이름 5자 초과 불가능
+   * 자동차 이름은 쉼표를 기준으로 구분  
 2. 시도할 횟수 입력 - InputView#getTryNumber
 3. [시도 횟수 만큼 loop] 자동차 전진 - CarRacingGenerator#moveCars  
    3-1. 랜덤 값 구하기 - CarRacingGenerator#getMovingNumber    
@@ -38,6 +38,9 @@
    3-2. 4이상이면 전진  
    3-3. 전진 후 출력  
 4. 우승자 출력
+   * 한 명 이상일 수 있다.
+
+---
 
 ## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)
 
