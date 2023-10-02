@@ -9,7 +9,13 @@ public class Car {
         this.position = new Position(0);
     }
 
+    public void move() {
+        this.position = this.position.add();
+    }
+
     public int getPosition() {
         return position.getPosition();
     }
+
+
 }

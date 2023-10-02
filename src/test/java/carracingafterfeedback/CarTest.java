@@ -11,4 +11,11 @@ public class CarTest {
         Car car = new Car("a");
         assertEquals(car.getPosition(),0);
     }
+
+    @Test
+    void 전진테스트() {
+        Car car = new Car("a");
+        car.move();
+        assertEquals(car.getPosition(),1);
+    }
 }
