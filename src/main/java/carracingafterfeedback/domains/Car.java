@@ -9,7 +9,15 @@ public class Car {
         this.position = new Position(0);
     }
 
-    public int getPosition() {
-        return position.getPosition();
+    public void move() {
+        this.position = this.position.add();
+    }
+
+    public int getPositionValue() {
+        return this.position.getPosition();
+    }
+
+    public String getName() {
+        return this.name;
     }
 }
