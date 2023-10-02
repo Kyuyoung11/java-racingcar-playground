@@ -1,11 +1,51 @@
-초기상태 백업
+## 문자열 덧셈 계산기
+[기능목록]
+1. 문자열 입력
+2. 문자열 분리  
+   2-1. 쉼표 또는 콜론을 구분자  
+   2-2. 커스텀 구분자
+    * 숫자 이외의 값 또는 음수이면 -> RuntimeException 예외 Throw
+3. 합 계산
+
+<br/>
+<br/>
+
+---
+## 자동차 경주 게임
+[기능 목록]
+1. 자동차 생성 Main#_createCars  
+   1-1. 자동차 이름 입력 - InputView#getCarNamesInput  
+   1-2. 자동차 만들기 - CarRacing#makeCars
+    * 자동차 이름 5자 초과 불가능
+    * 자동차 이름은 쉼표를 기준으로 구분
+2. 시도할 횟수 입력 - InputView#getTryNumber
+3. [시도 횟수 만큼 loop] 자동차 전진 - CarRacingGenerator#moveCars  
+   3-1. 랜덤 값 구하기 - CarRacingGenerator#getMovingNumber    
+   3-2. 4 이상이면 전진 - Car#moveCar  
+   3-3. 전진 결과 출력 - ResultPrinter#printMoveResult
+4. 우승한 자동차 출력 - ResultPrinter#printWinner
+    * 한 명 이상일 수 있다.
+
+---
+## 자동차 경주 게임 (피드백 반영)
+[기능 목록]
+1. 각 자동차 이름 부여  
+    1-1. 자동차 이름 입력 받기 (* 5자 초과 안됨)  
+    1-2. , 기준으로 자동차 이름 구분  
+2. 시도할 횟수 입력  
+3. 시도횟수 만큼 자동차 전진 시도  
+   3-1. 0~9 random값 구하기   
+   3-2. 4이상이면 전진  
+   3-3. 전진 후 출력  
+4. 우승자 출력
+
 ## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)
 
 ---
 ## 학습 효과를 높이기 위해 추천하는 미션 진행 방법
 
 ---
-1. 피드백 강의 전까지 미션 진행 
+1. 피드백 강의 전까지 미션 진행
 > 피드백 강의 전까지 혼자 힘으로 미션 진행. 미션을 진행하면서 하나의 작업이 끝날 때 마다 add, commit
 > 예를 들어 다음 숫자 야구 게임의 경우 0, 1, 2단계까지 구현을 완료한 후 push
 
