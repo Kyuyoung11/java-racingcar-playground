@@ -13,9 +13,11 @@ public class Car {
         this.position = this.position.add();
     }
 
-    public int getPosition() {
-        return position.getPosition();
+    public int getPositionValue() {
+        return this.position.getPosition();
     }
 
-
+    public String getName() {
+        return this.name;
+    }
 }
