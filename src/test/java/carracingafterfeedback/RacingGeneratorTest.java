@@ -18,8 +18,8 @@ public class RacingGeneratorTest {
     @Test
     void  createCars_테스트() throws Exception {
         Cars cars = racingGenerator.createCars("a,b,c");
-        assertEquals(cars.getCarByIndex(1).getName(), "a");
-        assertEquals(cars.getCarByIndex(2).getName(), "b");
-        assertEquals(cars.getCarByIndex(3).getName(), "c");
+        assertEquals(cars.getCarByIndex(0).getName(), "a");
+        assertEquals(cars.getCarByIndex(1).getName(), "b");
+        assertEquals(cars.getCarByIndex(2).getName(), "c");
     }
 }
