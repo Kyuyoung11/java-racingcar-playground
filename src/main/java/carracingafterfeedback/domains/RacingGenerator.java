@@ -1,17 +1,26 @@
 package carracingafterfeedback.domains;
 
 
-import java.util.ArrayList;
+import carracingafterfeedback.view.RacingInputView;
+
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class RacingGenerator {
-    public Cars createCars(String carInput) {
-        String[] carNames = carInput.split(",");
+    public Cars getCars() {
+        //1. 경주할 자동차 문자열 입력받기
+        String carsString = RacingInputView.getCarString();
 
-        List<Car> cars = new ArrayList<>();
-        for (String carName : carNames) {
-            cars.add(new Car(carName));
-        }
+        //2. Cars 생성
+        return createCars(carsString);
+    }
+    public Cars createCars(String carsString) {
+        String[] carNames = carsString.split(",");
+
+        List<Car> cars = Arrays.stream(carNames)
+                .map(Car::new)
+                .collect(Collectors.toList());
 
         return new Cars(cars);
     }
