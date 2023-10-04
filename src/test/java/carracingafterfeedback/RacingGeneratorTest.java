@@ -16,7 +16,7 @@ public class RacingGeneratorTest {
     }
 
     @Test
-    void  createCars_테스트() throws Exception {
+    void  createCars_테스트() {
         Cars cars = racingGenerator.createCars("a,b,c");
         assertEquals(cars.getCarByIndex(0).getName(), "a");
         assertEquals(cars.getCarByIndex(1).getName(), "b");
