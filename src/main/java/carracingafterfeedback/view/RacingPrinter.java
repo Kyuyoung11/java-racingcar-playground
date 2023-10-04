@@ -34,7 +34,7 @@ public class RacingPrinter {
         for (Car car : cars) {
             names.add(car.getName());
         }
-        return String.join(",",names);
+        return String.join(", ",names);
     }
 
 }
