@@ -12,6 +12,12 @@ public class Car {
         this.position = new Position(0);
     }
 
+    public Car(String name, int position) {
+        _validateCarName(name);
+        this.name = name;
+        this.position = new Position(position);
+    }
+
     private void _validateCarName(String name) {
         if (name.length()>=MAX_NAME_LENGTH) {
             throw new RuntimeException("자동차 이름은 "+MAX_NAME_LENGTH+"자를 초과할 수 없습니다.");
@@ -28,5 +34,9 @@ public class Car {
 
     public String getName() {
         return this.name;
+    }
+
+    public boolean isEqualPosition(int maxPosition) {
+        return this.position.isEqualPosition(maxPosition);
     }
 }

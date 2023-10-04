@@ -36,4 +36,17 @@ public class CarsTest {
         assertThatThrownBy(() -> cars.getCarByIndex(-1))
                 .isInstanceOf(RuntimeException.class);
     }
+
+    @Test
+    void 우승한자동차() {
+        List<Car> carList = new ArrayList<>();
+        carList.add(new Car("a",3));
+        carList.add(new Car("b",4));
+        carList.add(new Car("c",4));
+        cars = new Cars(carList);
+
+        Cars winnerCars = cars.getWinners();
+        assertEquals(winnerCars.getCarByIndex(0).getName(),"b");
+        assertEquals(winnerCars.getCarByIndex(1).getName(),"c");
+    }
 }
