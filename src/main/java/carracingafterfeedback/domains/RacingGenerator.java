@@ -24,4 +24,15 @@ public class RacingGenerator {
 
         return new Cars(cars);
     }
+
+    public void moveCars(Cars cars) {
+        //1. 시도횟수 입력
+        int tryCnt = RacingInputView.getTryCount();
+
+        //2. 전진
+        for (int i=0; i<tryCnt; i++) {
+            cars.forEach(car -> car.move(new RandomMovingStrategy()));
+        }
+    }
+
 }
