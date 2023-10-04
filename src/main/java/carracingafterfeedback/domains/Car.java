@@ -24,8 +24,9 @@ public class Car {
         }
     }
 
-    public void move() {
-        this.position = this.position.add();
+    public void move(MovingStrategy movingStrategy) {
+        if (movingStrategy.movable())
+            this.position = this.position.add();
     }
 
     public int getPositionValue() {
