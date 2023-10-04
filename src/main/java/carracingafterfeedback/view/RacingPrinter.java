@@ -19,6 +19,11 @@ public class RacingPrinter {
         System.out.println(car.getName()+" : " + makeHyphens(car.getPositionValue()));
     }
 
+    public static void printCars(Cars cars) {
+        cars.forEach(RacingPrinter::printCar);
+        System.out.println();
+    }
+
     public static void printWinners(Cars cars) {
         String winnerNames = _makeCarNames(cars.getWinners());
         System.out.println(winnerNames+"가 최종 우승했습니다.");

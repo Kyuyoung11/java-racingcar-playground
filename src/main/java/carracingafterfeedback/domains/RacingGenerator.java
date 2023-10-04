@@ -2,6 +2,7 @@ package carracingafterfeedback.domains;
 
 
 import carracingafterfeedback.view.RacingInputView;
+import carracingafterfeedback.view.RacingPrinter;
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,11 +32,14 @@ public class RacingGenerator {
 
         //2. 전진
         moveCars(tryCnt, cars);
+
     }
 
     public void moveCars(int tryCnt, Cars cars) {
+        System.out.println("실행결과");
         for (int i=0; i<tryCnt; i++) {
             cars.forEach(car -> car.move(new RandomMovingStrategy()));
+            RacingPrinter.printCars(cars);
         }
     }
 
