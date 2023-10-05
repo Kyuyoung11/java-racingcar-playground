@@ -38,6 +38,7 @@ public class Cars implements Iterable<Car>{
         return new Cars(winnerCars);
     }
 
+    //TODO : Position 으로 반환하도록
     public int getMaxPosition() {
         return this.cars.stream()
                 .mapToInt(Car::getPositionValue)

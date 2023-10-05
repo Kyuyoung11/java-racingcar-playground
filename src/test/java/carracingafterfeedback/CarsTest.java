@@ -17,6 +17,7 @@ public class CarsTest {
 
     @BeforeEach
     void setUp() {
+        //TODO .add 코드 없애보려는 고민 (병준님 코드 보기) -> Car 객체로 재사용할 수 있어서 좀 더 용이~
         List<Car> carList = new ArrayList<>();
         carList.add(new Car("a"));
         carList.add(new Car("b"));

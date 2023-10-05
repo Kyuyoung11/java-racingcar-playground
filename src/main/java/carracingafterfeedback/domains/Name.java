@@ -10,6 +10,7 @@ public class Name {
     }
 
 
+    //TODO IllegalArgument? 같이 좀 더 명확한 throw 처리 고민
     private void _validate(String name) {
         if (name.length()<=0) {
             throw new RuntimeException("자동차 이름은 1자 이상이어야 합니다.");
