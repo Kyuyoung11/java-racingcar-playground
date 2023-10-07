@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import stringAddCalculator.StringCalculator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
@@ -14,20 +15,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CarsTest {
     Cars cars;
+    Car car1;
+    Car car2;
+    Car car3;
 
     @BeforeEach
     void setUp() {
-        //TODO .add 코드 없애보려는 고민 (병준님 코드 보기) -> Car 객체로 재사용할 수 있어서 좀 더 용이~
-        List<Car> carList = new ArrayList<>();
-        carList.add(new Car("a"));
-        carList.add(new Car("b"));
-        carList.add(new Car("c"));
+        car1 = new Car("a");
+        car2 = new Car("b");
+        car3 = new Car("c");
 
-        cars = new Cars(carList);
+        cars = new Cars(Arrays.asList(car1,car2,car3));
     }
     @Test
-    void 차이름_인덱스로가져오기_성공() {
-        assertEquals(cars.getCarByIndex(0).getName(),"a");
+    void Cars_생성자() {
+        assertEquals(car1.getName(), "a");
     }
 
     @Test
@@ -40,11 +42,10 @@ public class CarsTest {
 
     @Test
     void 우승한자동차() {
-        List<Car> carList = new ArrayList<>();
-        carList.add(new Car("a",3));
-        carList.add(new Car("b",4));
-        carList.add(new Car("c",4));
-        cars = new Cars(carList);
+        car1 = new Car("a",4);
+        car2 = new Car("b",5);
+        car3 = new Car("c", 5);
+        cars = new Cars(Arrays.asList(car1,car2,car3));
 
         Cars winnerCars = cars.getWinners();
         assertEquals(winnerCars.getCarByIndex(0).getName(),"b");

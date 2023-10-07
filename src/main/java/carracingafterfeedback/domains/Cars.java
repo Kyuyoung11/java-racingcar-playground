@@ -19,16 +19,16 @@ public class Cars implements Iterable<Car>{
 
     private void _validateIndexValue(int i){
         if (i < 0) {
-            throw new RuntimeException("Index값은 0 이상이어야 합니다.");
+            throw new IllegalArgumentException("Index값은 0 이상이어야 합니다.");
         }
         if (cars.size() < i) {
-            throw new RuntimeException("Index값은 "+ (cars.size()-1) + "를 초과할 수 없습니다.");
+            throw new IllegalArgumentException("Index값은 "+ (cars.size()-1) + "를 초과할 수 없습니다.");
         }
     }
 
     public Cars getWinners() {
         //1. position 최대값 조회
-        int maxPosition = getMaxPosition();
+        Position maxPosition = getMaxPosition();
 
         //2. position이 최대값인 Car List
         List<Car> winnerCars = this.cars.stream()
@@ -38,12 +38,11 @@ public class Cars implements Iterable<Car>{
         return new Cars(winnerCars);
     }
 
-    //TODO : Position 으로 반환하도록
-    public int getMaxPosition() {
-        return this.cars.stream()
+    public Position getMaxPosition() {
+        return new Position(this.cars.stream()
                 .mapToInt(Car::getPositionValue)
                 .max()
-                .getAsInt();
+                .getAsInt());
     }
 
 

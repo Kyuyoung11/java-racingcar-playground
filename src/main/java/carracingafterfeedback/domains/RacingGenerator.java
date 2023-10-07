@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class RacingGenerator {
-    //TODO 여기에 멤버변수로 Cars를 넣어서 진짜 객체로서 사용해볼 고민
+
     public Cars getCars() {
         while(true) {
             try {
