@@ -25,11 +25,15 @@ public class Car {
         return this.position.getPosition();
     }
 
+    public Position getPosition() {
+        return this.position;
+    }
+
     public String getName() {
         return this.name.getName();
     }
 
-    public boolean isEqualPosition(int maxPosition) {
+    public boolean isEqualPosition(Position maxPosition) {
         return this.position.isEqualPosition(maxPosition);
     }
 }

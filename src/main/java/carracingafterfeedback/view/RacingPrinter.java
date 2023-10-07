@@ -7,6 +7,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RacingPrinter {
+
+    public static void printCars(Cars cars) {
+        cars.forEach(RacingPrinter::printCar);
+        System.out.println();
+    }
+
+
+    public static void printCar(Car car) {
+        System.out.println(car.getName()+" : " + makeHyphens(car.getPositionValue()));
+    }
+
     public static String makeHyphens(int count) {
         StringBuilder sb = new StringBuilder();
         for (int i=0; i<count; i++) {
@@ -15,14 +26,7 @@ public class RacingPrinter {
         return sb.toString();
     }
 
-    public static void printCar(Car car) {
-        System.out.println(car.getName()+" : " + makeHyphens(car.getPositionValue()));
-    }
 
-    public static void printCars(Cars cars) {
-        cars.forEach(RacingPrinter::printCar);
-        System.out.println();
-    }
 
     public static void printWinners(Cars cars) {
         String winnerNames = _makeCarNames(cars.getWinners());

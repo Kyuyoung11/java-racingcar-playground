@@ -15,7 +15,7 @@ public class Position {
         return new Position(this.position+1);
     }
 
-    public boolean isEqualPosition(int maxPosition) {
-        return this.position == maxPosition;
+    public boolean isEqualPosition(Position maxPosition) {
+        return this.position == maxPosition.position;
     }
 }
